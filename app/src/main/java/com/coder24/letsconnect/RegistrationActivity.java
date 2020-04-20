@@ -174,6 +174,20 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
+    //If User is already logged in previously, it doesn't need to logged in again & again.
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(firebaseUser != null){
+            startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+            finish();
+        }
+    }
+
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
