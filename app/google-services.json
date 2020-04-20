@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "779501890085",
+    "firebase_url": "https://lets-connect-32209.firebaseio.com",
+    "project_id": "lets-connect-32209",
+    "storage_bucket": "lets-connect-32209.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779501890085:android:50bfd02b18d6d3a3602dcc",
+        "android_client_info": {
+          "package_name": "com.coder24.letsconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779501890085-2r1uosr6va0k2fsjkk5up286lc9mt0bs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coder24.letsconnect",
+            "certificate_hash": "9d277fb3b5586ba87a40983e298166c7ae3bce7b"
+          }
+        },
+        {
+          "client_id": "779501890085-rrmeq10pplr6g8mqd5vjsdrlvnqrh2eg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYXQYQC57m5I4GUqhLmuvAE-TWtLdAma8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779501890085-rrmeq10pplr6g8mqd5vjsdrlvnqrh2eg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
