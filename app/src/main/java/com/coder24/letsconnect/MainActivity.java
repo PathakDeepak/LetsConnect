@@ -3,20 +3,22 @@ package com.coder24.letsconnect;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView navView;
+    RecyclerView myContactList;
+    ImageView findPeopleBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+
+        findPeopleBtn = findViewById(R.id.find_people_btn);
+        myContactList = (RecyclerView) findViewById(R.id.contact_lists);
+        myContactList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        findPeopleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FindPeopleActivity.class));
+            }
+        });
 
     }
 

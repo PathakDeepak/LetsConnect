@@ -1,16 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/back"
+    tools:context=".SettingActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/setting_profile_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/profile_image"
+        />
+
+    <EditText
+        android:id="@+id/username_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Setting Page"
-        android:textSize="30dp"
-        android:layout_centerInParent="true"
-        android:gravity="center"
+        android:drawableLeft="@drawable/edit_profile"
+        android:drawableTint="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Your Name"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/setting_profile_image"
+        />
+
+    <EditText
+        android:id="@+id/username_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/edit_status"
+        android:drawableTint="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="About"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/username_setting"
+        />
+
+    <Button
+        android:id="@+id/save_setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="30dp"
+        android:text="Save"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/username_about"
         />
 
 </RelativeLayout>
